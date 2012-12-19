@@ -7,7 +7,9 @@ There are [other good options][option] for turning Django models into CSVs, but 
 First, define a mapping of CSV column headers to attributes on your model, preferably using an `OrderedDict`:
 
     from collections import OrderedDict
-    from csvview import CSVViewMixin
+    from csvview.views import CSVViewMixin
+    from django.views.generic import ListView
+    from .models import Foo
 
     csv_mapping = OrderedDict([
         ('COMPANY', 'company.name'),   
@@ -17,6 +19,7 @@ First, define a mapping of CSV column headers to attributes on your model, prefe
 
     class FooCSVView(CSVViewMixin, ListView):
         csv_mapping = csv_mapping
+        queryset = Foo.objects.all()
 
 And that's it! Wire up this view to a url, and you'll get a CSV like this:
 
