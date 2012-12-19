@@ -48,3 +48,10 @@ And since the callable is passed the object and the label for the row, you can a
 
 [tablib]: http://python-tablib.org
 [option]: https://github.com/joshourisman/django-tablib
+
+
+### Thanks
+
+Thanks to [BOLD Internet Solutions][bold] for supporting the development, and allowing the open sourcing of, this package.
+
+[bold]: http://www.bold-is.com/
