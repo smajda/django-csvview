@@ -4,7 +4,7 @@ There are [other good options][option] for turning Django models into CSVs, but 
 
 ### Usage
 
-First, define a mapping of CSV column headers to attributes on your model, preferably using an `OrderedDict`:
+Simply define a dictionary mapping CSV column headers to attributes on your model (using an OrderedDict if order matters) and then use `CSVViewMixin` and set `csv_mapping` in your view:
 
     from collections import OrderedDict
     from csvview.views import CSVViewMixin
@@ -52,6 +52,6 @@ And since the callable is passed the object and the label for the row, you can a
 
 ### Thanks
 
-Thanks to [BOLD Internet Solutions][bold] for supporting the development, and allowing the open sourcing of, this package.
+Thanks to [BOLD Internet Solutions][bold] for supporting the development, and allowing the open sourcing, of this package.
 
 [bold]: http://www.bold-is.com/
