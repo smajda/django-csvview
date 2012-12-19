@@ -1,4 +1,4 @@
-A Django View Mixin for turning into ListView (or any view with `get_queryset`) into a highly customizable CSV download utilizing [tablib][].
+A Django View Mixin for turning a ListView (or any view with `get_queryset`) into a highly customizable CSV download utilizing [tablib][].
 
 There are [other good options][option] for turning Django models into CSVs, but this was built for a use case I kept encountering where existing methods weren't flexible enough: with CSVs you often have to match the input format expected by some other system, so automatically generating headers from field names or being limited to only outputting data from your model directly won't cut it. Hence: this app.
 
